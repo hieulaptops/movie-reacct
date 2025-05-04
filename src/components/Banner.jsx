@@ -45,7 +45,7 @@ const
                     <div className='w-[50%] flex items-center justify-center'>
                         <div className='w-[300px] h-[500px] relative group' >
                             <img src={ImgBanner} alt="imgbanner" className=' w-full h-full object-cover' />
-                            <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'>
+                            <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out cursor-pointer'>
                                 <img src={Playbutton} alt="playbutton" className='w-20 h-20' />
                             </div>
                         </div>

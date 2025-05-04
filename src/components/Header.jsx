@@ -1,6 +1,8 @@
-import React from 'react'
-
-const Header = () => {
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+PropTypes
+const Header = ({onSearch}) => {
+    const [search, setSearch] = useState('');
     return (
         <div className='p-4 bg-black flex items-center justify-between'>
 
@@ -14,12 +16,14 @@ const Header = () => {
                 </nav>
             </div>
             <div className='flex items-center space-x-4'>
-                <input type='text' placeholder='Search' className='p-2 text-black bg-white' />
-                <button className='p-2 text-white bg-red-600'>Search</button>
+                <input type='text' placeholder='Search' className='p-2 text-black bg-white' onChange={(e)=>setSearch(e.target.value)} value={search} />
+                <button className='p-2 text-white bg-red-600' onClick={()=>onSearch(search)}>Search</button>
             </div>
-
         </div>
     )
+}
+Header.prototype={
+    onSearch : PropTypes.func
 }
 
 export default Header
